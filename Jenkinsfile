@@ -8,5 +8,15 @@ pipeline {
                 sh 'mvn --version'
             }
         }
+        stage('compile'){
+            steps{
+                sh 'mvn compile'
+            }
+        }
+        stage('verify'){
+                    steps{
+                        sh 'mvn verify'
+                    }
+                }
     }
 }

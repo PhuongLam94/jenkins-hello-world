@@ -4,7 +4,7 @@ pipeline {
         stage('test executables') {
             steps {
                 sh 'java --version'
-               ]sh 'echo $PATH'
+               sh 'echo $PATH'
                 sh 'mvn --version'
             }
         }

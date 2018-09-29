@@ -1,13 +1,13 @@
 pipeline {
     agent any
     stages {
-        stage('build') {
+        stage('test executables') {
             steps {
-                sh 'which java'
-                sh 'id -un'
                 sh 'java --version'
+                sh 'export M2_HOME=/Users/phuonglam/Downloads/apache-maven-3.5.4'
+                sh 'export PATH=$PATH:$M2_HOME/bin'
                 sh 'echo $PATH'
-                sh '/Users/phuonglam/Downloads/apache-maven-3.5.4/bin/mvn --version'
+                sh 'mvn --version'
             }
         }
     }

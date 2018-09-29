@@ -6,6 +6,7 @@ pipeline {
                 sh 'which java'
                 sh 'id -un'
                 sh 'java --version'
+                sh 'echo $PATH'
                 sh '/Users/phuonglam/Downloads/apache-maven-3.5.4/bin/mvn --version'
             }
         }
